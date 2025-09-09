@@ -41,7 +41,7 @@ Uma ferramenta inteligente para popular bancos de dados PostgreSQL com dados fic
 ```bash
 # Clone o repositório
 git clone <url-do-repositorio>
-cd database-population-tool
+cd MockTree
 
 # Instale as dependências
 npm install
@@ -49,7 +49,7 @@ npm install
 
 ### 3. Configuração
 
-Crie um arquivo `.env` na raiz do projeto:
+Renomea arquivo `.env_template` para `.env` na raiz do projeto e preencha os dados:
 
 ```env
 DB_HOST=localhost
@@ -206,35 +206,86 @@ DB_SSL=true
 - **dotenv**: Gerenciamento de variáveis de ambiente
 - **readline**: Interface de linha de comando interativa
 
-## 🤝 Contribuindo
+📋 Roadmap / Funcionalidades Futuras
+🎯 Versão 2.0 - Expansão de Compatibilidade
 
-1. Faça fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/nova-funcionalidade`)
-3. Commit suas mudanças (`git commit -am 'Adiciona nova funcionalidade'`)
-4. Push para a branch (`git push origin feature/nova-funcionalidade`)
-5. Abra um Pull Request
+ Multi-Database Support: Suporte completo para MySQL, SQL Server, SQLite, Oracle
+ Adaptadores de Banco: Sistema de adaptadores para diferentes SGBDs
+ Auto-detecção de SGBD: Identificação automática do tipo de banco
+ Queries Universais: Sistema de queries que se adapta ao dialeto SQL
 
-## 📋 TODO / Melhorias Futuras
+📦 Versão 2.1 - Distribuição NPM
 
-- [ ] Interface web para visualização da árvore de dependências
-- [ ] Suporte a outros SGBDs (MySQL, SQL Server)
-- [ ] Configuração de quantidade de registros por tabela
-- [ ] Templates de dados personalizados
-- [ ] Modo batch para múltiplas tabelas
-- [ ] Export/Import de configurações
-- [ ] Integração com CI/CD para ambientes de teste
+ Publicação NPM: Disponibilizar como pacote @mocktree/core
+ CLI Global: Instalar globalmente com npm install -g mocktree
+ API Programática: Usar como biblioteca em outros projetos
+ TypeScript Support: Tipagens completas para melhor DX
+ ESM/CommonJS: Suporte a ambos os formatos de módulo
 
-## ⚠️ Avisos Importantes
+🎨 Versão 3.0 - Interface Visual
 
-- Use apenas em ambientes de **desenvolvimento/teste**
-- Sempre faça **backup** antes de executar em dados importantes  
-- Verifique **permissões** de usuário do banco
-- Teste com **dados pequenos** primeiro
+ Dashboard Web: Interface visual para gerenciar população
+ Visualização de Árvore: Gráfico interativo das dependências FK
+ Editor de Schemas: Interface para mapear e configurar tabelas
+ Histórico de Execuções: Log visual das operações realizadas
+ Templates Visuais: Criador drag-and-drop de templates
 
-## 📄 Licença
+🛠️ Versão 3.1 - Gestão Avançada
 
+ Profiles de Configuração: Múltiplos perfis para diferentes ambientes
+ Quantidade Configurável: Definir quantos registros inserir por tabela
+ Estratégias de Inserção: Diferentes modos (bulk, individual, transaction)
+ Validação Prévia: Verificação de estrutura antes da execução
+ Rollback Inteligente: Desfazer operações em caso de erro
+
+🎭 Versão 4.0 - Templates e Personalização
+
+ Templates de Domínio: E-commerce, CRM, ERP, Blog, etc.
+ Dados Localizados: Suporte a diferentes idiomas e regiões
+ Faker.js Integration: Integração com bibliotecas de dados falsos
+ Custom Generators: Sistema de plugins para geradores personalizados
+ Seed Files: Importar dados de arquivos CSV, JSON, SQL
+
+🔄 Versão 4.1 - Automação e Integração
+
+ CI/CD Integration: Plugins para GitHub Actions, Jenkins, etc.
+ Docker Support: Containers para execução isolada
+ API REST: Serviço web para integração com outras ferramentas
+ Webhooks: Notificações automáticas após execução
+ Scheduled Jobs: Execução programada e recorrente
+
+🧪 Versão 5.0 - Testing & Quality
+
+ Test Data Management: Gerenciamento completo de dados de teste
+ Environment Sync: Sincronizar dados entre ambientes
+ Data Anonymization: Anonimizar dados sensíveis para testes
+ Performance Testing: Dados otimizados para testes de performance
+ Compliance Mode: Modo compatível com LGPD/GDPR
+
+⚡ Funcionalidades Experimentais
+
+ AI-Powered Data: IA para gerar dados mais realistas
+ Schema Learning: Aprendizado automático de padrões de dados
+ Smart Relationships: Detecção inteligente de relacionamentos implícitos
+ Natural Language: Comandos em linguagem natural
+ Real-time Streaming: População em tempo real para testes
+
+🌐 Ecossistema MockTree
+
+ MockTree Studio: IDE completo para gestão de dados
+ MockTree Cloud: Serviço em nuvem para equipes
+ MockTree Marketplace: Marketplace de templates e plugins
+ MockTree Academy: Cursos e documentação avançada
+
+⚠️ Avisos Importantes
+
+Use apenas em ambientes de desenvolvimento/teste
+Sempre faça backup antes de executar em dados importantes
+Verifique permissões de usuário do banco
+Teste com dados pequenos primeiro
+
+📄 Licença
 ISC License - Veja arquivo LICENSE para detalhes.
-
 ---
 
 **Desenvolvido com ❤️ para facilitar o desenvolvimento e testes de aplicações**
